@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Madimi+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .floating-box {
+      position: relative;
+      animation: floatAnimation 2s infinite;
+    }
+
+    @keyframes floatAnimation {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#0F172A] text-white ">
+  <div class="relative">
+    <nav class="flex items-center  justify-between py-2 shadow px-20 border-b border-gray-800" id="home">
+      <div class="logo bg-white rounded">
+        <img src="assets/code.png" width="50px" height="50px" alt="" />
+      </div>
+      <ul class="flex items-center">
+        <li class="me-8"><button onclick="scrollToSection('home')" class="font-bold">HOME</button></li>
+        <li class="me-8"><button onclick="scrollToSection('about')" class="font-bold">ABOUT</button></li>
+        <li class="me-8"><button onclick="scrollToSection('skills')" class="font-bold">SKILLS</button></li>
+        <li class="me-8"><button onclick="scrollToSection('projects')" class="font-bold">PROJECTS</button></li>
+        <li class="me-8"><button onclick="scrollToSection('footer')" class="font-bold">CONTACT</button></li>
+      </ul>
+    </nav>
+    <div class="px-20 flex items-center justify-around pt-20 min-h-[90vh] overflow-x-hidden">
+      <div class="mt-10">
+        <h1 class="text-8xl tracking-wideest font-['Pacifico'] leading-snug pb-20 animate__animated animate__backInLeft"
+          id="title">
+          I'm<br />Aung Thu Hein
+        </h1>
+        <div>
+          <button
+            class="border shadow-sm px-2 py-1 rounded text-xl capitalize hover:scale-105 transition-all duration-3000">
+            Download CSV <i class="fa fa-solid fa-file-csv"></i>
+          </button>
+        </div>
+      </div>
+      <div class="animate__animated animate__backInRight">
+        <img src="assets/ath.jpg" alt="" class="rounded-full" width="400px" />
+      </div>
+    </div>
+    <div class="pt-20 mb-20 w-3/4 m-auto animate__animated" id="animatedDiv">
+      <div class="rounded text-white font-['Cabin'] text-lg font-light glass floating-box">
+        <div class="flex justify-end p-2 borde border-b">
+          <img src="minus.png" class="me-2" width="18px" alt="" />
+          <img src="expand.png" class="me-2" width="18px" alt="" />
+          <img src="close.png" class="me-2" width="18px" alt="" />
+        </div>
+        <div class="p-6 text-justify " id="about">
+          <span>Hi,</span><br />
+          <span class="ms-4 leading-snug tracking-wideest ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At quae
+            unde, delectus dolorum omnis neque rem animi in odio aut facilis
+            est. Voluptates quam, quaerat accusamus laudantium animi quas vel!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Distinctio, autem accusamus aliquam incidunt quibusdam ea sint
+            nihil molestias numquam tempore reiciendis. Molestias ex rem ab ea
+            nihil expedita esse corrupti! Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Distinctio, autem accusamus aliquam
+            incidunt quibusdam ea sint nihil molestias numquam tempore
+            reiciendis. Molestias ex rem ab ea nihil expedita esse corrupti!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Distinctio, autem accusamus aliquam incidunt quibusdam ea sint
+            nihil molestias numquam tempore reiciendis. Molestias ex rem ab ea
+            nihil expedita esse corrupti! Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Distinctio, autem accusamus aliquam
+            incidunt quibusdam ea sint nihil molestias numquam tempore
+            reiciendis. Molestias ex rem ab ea nihil expedita esse corrupti!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Distinctio, autem accusamus aliquam incidunt quibusdam ea sint
+            nihil molestias numquam tempore reiciendis. Molestias ex rem ab ea
+            nihil expedita esse corrupti!
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-20 px-20 mb-20 flex m-auto w-fit m-auto animate__animated animatedDiv2" id="skills">
+      <!-- <h1 class="text-3xl font-[Pacifico]">My Skills</h1> -->
+      <div class="flex">
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-html5 text-5xl"></i><br>
+          <span class="text-lg">HTML</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-css3-alt text-5xl"></i><br>
+          <span class="text-lg">CSS</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-java text-5xl"></i><br>
+          <span class="text-lg">Java</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-js text-5xl"></i><br>
+          <span class="text-lg">Javascript</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-bootstrap text-5xl"></i><br>
+          <span class="text-lg">bootstrap</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <i class="fa-brands fa-react text-5xl"></i><br>
+          <span class="text-lg">React</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <img src="assets/tailwind.svg" width="55" height="55" alt="">
+          <span class="text-lg">Tailwind</span>
+        </div>
+        <div class="w-fit text-center mx-12">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="55" height="55" viewBox="0 0 16 16"
+            style="fill:#FFFFFF;">
+            <path
+              d="M 8 1.0234375 C 7.736875 1.0234375 7.4742344 1.0924687 7.2402344 1.2304688 L 2.7402344 3.8789062 C 2.2832344 4.1469063 2 4.642875 2 5.171875 L 2 11.005859 C 2 11.554859 2.29925 12.059266 2.78125 12.322266 L 4.2558594 13.126953 C 4.4828594 13.250953 4.7286094 13.310547 4.9746094 13.310547 C 5.2386094 13.310547 5.4992812 13.239609 5.7382812 13.099609 C 6.1982812 12.826609 6.4726562 12.344594 6.4726562 11.808594 L 6.4726562 5.4648438 L 5.4726562 5.4648438 L 5.4726562 11.808594 C 5.4726562 12.065594 5.3025156 12.195281 5.2285156 12.238281 C 5.1555156 12.281281 4.959375 12.371047 4.734375 12.248047 L 3.2617188 11.445312 C 3.1007187 11.357312 3 11.188859 3 11.005859 L 3 5.171875 C 3 4.995875 3.0940938 4.8302344 3.2460938 4.7402344 L 7.7460938 2.0917969 C 7.9020937 1.9997969 8.0979062 2.0007969 8.2539062 2.0917969 L 12.753906 4.7402344 C 12.904906 4.8302344 13 4.995875 13 5.171875 L 13 11.009766 C 13 11.189766 12.900234 11.359219 12.740234 11.449219 L 8.2402344 13.900391 C 8.0902344 13.980391 7.9097656 13.980391 7.7597656 13.900391 L 6.8808594 13.419922 C 6.7108594 13.629922 6.5 13.810937 6.25 13.960938 C 6.17 14.010938 6.0897656 14.050078 6.0097656 14.080078 L 7.2792969 14.779297 C 7.5092969 14.899297 7.75 14.960938 8 14.960938 C 8.25 14.960938 8.4907031 14.899297 8.7207031 14.779297 L 13.220703 12.320312 C 13.700703 12.060313 14 11.559766 14 11.009766 L 14 5.171875 C 14 4.642875 13.717719 4.1469062 13.261719 3.8789062 L 8.7617188 1.2304688 C 8.5272187 1.0924688 8.263125 1.0234375 8 1.0234375 z M 9.4511719 5.3183594 C 7.8711719 5.3183594 7.0703125 5.8690781 7.0703125 6.9550781 C 7.0703125 8.1850781 8.4869687 8.3680781 9.1679688 8.4550781 C 9.2659688 8.4680781 9.352875 8.4791875 9.421875 8.4921875 L 9.7207031 8.5449219 C 10.760703 8.7189219 11 8.836875 11 9.171875 C 11 9.333875 10.999172 9.8242188 9.4511719 9.8242188 C 8.1381719 9.8242188 7.8691406 9.4346094 7.8691406 8.8496094 L 6.8691406 8.8496094 C 6.8691406 9.7516094 7.3171719 10.824219 9.4511719 10.824219 C 11.557172 10.824219 12 9.925875 12 9.171875 C 12 7.913875 10.777719 7.7076406 9.8867188 7.5566406 L 9.5996094 7.5078125 C 9.5166094 7.4928125 9.4119219 7.4788438 9.2949219 7.4648438 C 8.6589219 7.3828438 8.0703125 7.2650312 8.0703125 6.9570312 C 8.0703125 6.7340313 8.0691719 6.3193594 9.4511719 6.3183594 C 10.370172 6.3183594 10.837891 6.6207969 10.837891 7.2167969 L 11.837891 7.2167969 C 11.837891 6.2997969 11.209172 5.3183594 9.4511719 5.3183594 z">
+            </path>
+          </svg>
+          <span class="text-lg">Nodejs</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-20 px-20 mb-20 animate__animated animatedDiv3" id="projects">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="glass p-4 rounded floating-box">
+          <img src="https://repository-images.githubusercontent.com/456963513/82528385-a73f-488f-9003-513321283a6b"
+            alt="">
+          <div class="p-4">
+            <a href="#" class="text-lg font-bold">Ecommerce</a>
+            <p class="text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia consectetur iste! Autem ipsa ab
+              modi fugit excepturi, voluptatibus consequuntur adipisci sit ex voluptatem rem? Sunt, aperiam!
+              Praesentium, similique tempore?
+            </p>
+          </div>
+        </div>
+        <div class="glass p-4 rounded floating-box">
+          <img src="https://agentestudio.com/uploads/ckeditor/pictures/1681/simple_blog_interface.jpg" alt="">
+          <div class="p-4">
+            <a href="#" class="text-lg font-bold">Blog</a>
+            <p class="text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia consectetur iste! Autem ipsa ab
+              modi fugit excepturi, voluptatibus consequuntur adipisci sit ex voluptatem rem? Sunt, aperiam!
+              Praesentium, similique tempore?
+            </p>
+          </div>
+        </div>
+        <div class="glass p-4 rounded floating-box">
+          <img
+            src="https://cdn.dribbble.com/userupload/2806800/file/original-255b26afbd8549cbfd489a498643ea4b.png?resize=400x300&vertical=center"
+            alt="">
+          <div class="p-4">
+            <a href="#" class="text-lg font-bold">POS</a>
+            <p class="text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+        <div class="glass p-4 rounded floating-box">
+          <img src="https://static.tildacdn.com/tild3031-3964-4064-b232-313764363763/54988edac59279343335.png" alt="">
+          <div class="p-4">
+            <a href="#" class="text-lg font-bold">ERP</a>
+            <p class="text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia consectetur iste! Autem ipsa ab
+              modi fugit excepturi, voluptatibus consequuntur adipisci sit ex voluptatem rem? Sunt, aperiam!
+              Praesentium, similique tempore?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-black text-white py-20 px-20 flex items-center justify-around" id="footer">
+      <div>
+        <ul class="flex">
+          <li class="my-4">
+            <a href="" class="rounded text-4xl shadow-md px-4 py-1 "><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li class="my-4">
+            <a href="" class="rounded text-4xl shadow-md px-4 py-1 "><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li class="my-4">
+            <a href="" class="rounded text-4xl shadow-md px-4 py-1 "><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="my-4">
+            <a href="" class="rounded text-4xl shadow-md px-4 py-1 "><i class="fa-brands fa-telegram"></i></a>
+          </li>
+          <li class="my-4">
+            <a href="" class="rounded text-4xl shadow-md px-4 py-1 "><i class="fa-brands fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="border-s-8">
+        <ul class="ps-4">
+          <li class="flex items-end my-4">
+            <i class="fa-solid fa-phone-volume text-2xl me-2"></i>
+            <p class="text-2xl">+959423903504 | +959782462110</p>
+          </li>
+          <li class="flex items-end my-4">
+            <i class="fa-solid fa-envelope text-2xl me-2"></i>
+            <a href="" class="text-2xl">aungthuhein.dev@gmail.com</a>
+          </li>
+          <li class="flex items-end my-4">
+            <i class="fa-solid fa-location-dot text-2xl me-2"></i>
+            <p class="text-2xl">Room 408,Garden City, Mandalay</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      let scrollThresold = 300;
+      let scrollThreshold2 = 600;
+      let scrollThreshold3 = 900;
+      $(window).scroll(() => {
+        if ($(this).scrollTop() > scrollThresold) {
+          $('#animatedDiv').addClass('animate__zoomIn');
+        } else {
+          $('#animatedDiv').removeClass('animate__zoomIn');
+        }
+
+        if ($(this).scrollTop() > scrollThreshold2) {
+          // Add the animated class and show the element
+          $('.animatedDiv2').removeClass('hidden').addClass('animate__backInLeft');
+        } else {
+          // Remove the animated class and hide the element
+          $('.animatedDiv2').removeClass('animate__backInLeft').addClass('hidden');
+        }
+
+        if ($(this).scrollTop() > scrollThreshold3) {
+          // Add the animated class and show the element
+          $('.animatedDiv3').addClass('animate__fadeIn');
+        } else {
+          // Remove the animated class and hide the element
+          $('.animatedDiv3').removeClass('animate__fadeIn');
+        }
+
+      })
+    })
+
+    function scrollToSection(sectionId) {
+      $('html, body').animate({
+        scrollTop: $('#' + sectionId).offset().top
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>
